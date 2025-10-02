@@ -1,4 +1,4 @@
-@layer theme,reset,base,utils,components;
+@layer theme, reset, base, utils, components;
 
 @font-face {
   font-family: "InterVar";
@@ -67,6 +67,7 @@
       list-style: none;
     }
   }
+
   a {
     color: var(--secondary-clr);
     text-decoration: none;
@@ -81,6 +82,7 @@
     --font-display-semibold: "Poppins-semibold", system-ui, sans-serif;
     --font-display-medium: "Poppins-medium", system-ui, sans-serif;
   }
+
   img {
     width: 100%;
   }
@@ -88,7 +90,8 @@
 
 @layer utils {
   .container {
-    --container-max: 75rem; /* 1200px */
+    --container-max: 75rem;
+    /* 1200px */
     --gutter: 20px;
     --gutter-mobile: 10px;
     max-inline-size: var(--container-max);
@@ -102,6 +105,7 @@
         max(var(--gutter-mobile), env(safe-area-inset-right));
     }
   }
+
   .gradient {
     position: absolute;
     height: 480px;
@@ -110,6 +114,7 @@
     border-radius: 50%;
     filter: blur(120px);
   }
+
   .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -131,6 +136,7 @@
   .items-center {
     align-items: center;
   }
+
   .justify-center {
     justify-content: center;
   }
@@ -138,6 +144,7 @@
   .justify-between {
     justify-content: space-between;
   }
+
   .justify-end {
     justify-content: end;
   }
@@ -163,6 +170,7 @@
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
+
     &.btn-primary {
       --background-clr: var(--primary-clr);
       --text-clr: #fff;
@@ -174,6 +182,7 @@
       --border-clr: transparent;
       color: var(--primary-clr);
     }
+
     &.btn-link {
       border: none;
       --background-clr: transparent;
@@ -194,6 +203,7 @@
       font-size: 0.875rem;
       font-weight: 500;
       gap: 2px;
+
       svg {
         color: #0bac76;
       }
@@ -203,18 +213,24 @@
   header {
     position: relative;
     z-index: 9;
+
     & .container {
       container-name: header;
       container-type: inline-size;
     }
+
     min-height: 70px;
     border-bottom: 1px solid color-mix(in oklab, #001231 10%, transparent);
     padding-top: 10px;
+
     &.flex {
-      gap: clamp(8px, 2vw, 16px); /* fluid gap */
+      gap: clamp(8px, 2vw, 16px);
+      /* fluid gap */
     }
+
     .logo {
       flex: 0 0 auto;
+
       a {
         display: flex;
         align-items: center;
@@ -232,6 +248,7 @@
       flex: 1 1 auto;
       min-width: 0;
       margin-inline-end: 20px;
+
       ul {
         li {
           a {
@@ -243,6 +260,7 @@
             border-bottom: 2px solid #33333300;
             white-space: nowrap;
           }
+
           &.active {
             a {
               color: var(--primary-clr);
@@ -256,8 +274,10 @@
     .options {
       flex: 0 0 auto;
       margin-left: auto;
+
       ul {
         gap: clamp(6px, 1.5vw, 10px);
+
         li {
           & select {
             min-height: 30px;
@@ -265,6 +285,7 @@
             background-color: transparent;
             border-radius: 4px;
           }
+
           button {
             /* &.btn-primary {
               max-width: 130px;
@@ -279,9 +300,11 @@
       flex: 0 0 auto;
       margin-left: auto;
       display: none;
+
       button {
         background-color: transparent;
         border: none;
+
         svg {
           color: var(--secondary-clr);
         }
@@ -317,45 +340,55 @@
       container-name: hero-sec;
       container-type: inline-size;
     }
+
     .g1 {
       left: -40px;
       top: -40px;
     }
+
     .g2 {
       left: 50%;
       top: 200px;
       transform: translateX(-50%);
     }
+
     .g3 {
       right: -40px;
       top: -40px;
     }
+
     .content {
       position: relative;
       text-align: center;
       margin-top: 90px;
       z-index: 9;
+
       h2 {
         font-size: 2.875rem;
         font-weight: 500;
         align-items: center;
         line-height: 3.5rem;
         font-family: var(--font-display-semibold);
+
         span {
           &.color {
             color: var(--primary-clr);
           }
+
           &.bold {
             display: block;
             font-family: var(--font-display-bold);
           }
+
           font-weight: 700;
         }
       }
+
       p {
         max-width: 38.125rem;
         margin-inline: auto;
         margin-top: 12px;
+
         span {
           font-weight: 500;
         }
@@ -368,6 +401,7 @@
         align-items: center;
         justify-content: center;
       }
+
       .box {
         margin-top: 40px;
         display: flex;
@@ -376,22 +410,27 @@
         max-width: 600px;
         width: 100%;
         margin-inline: auto;
+
         & > .user {
           display: flex;
           justify-content: space-between;
           align-items: center;
           gap: 10px;
+
           & > ul {
             display: flex;
             align-items: center;
+
             li {
               margin-left: -14px;
+
               img {
                 border: 3px solid #fff;
                 border-radius: 20px;
               }
             }
           }
+
           h5 {
             font-weight: 500;
             font-size: 0.875rem;
@@ -399,6 +438,7 @@
         }
       }
     }
+
     img.dashboard-img {
       margin-top: 50px;
       position: relative;
@@ -413,6 +453,7 @@
 
   section.lose-details {
     padding-block: 50px;
+
     & .container {
       position: relative;
 
@@ -424,8 +465,10 @@
       left: -50px;
       top: -280px;
     }
+
     .content {
       position: relative;
+
       h3 {
         font-weight: 700;
         font-size: 30px;
@@ -449,6 +492,7 @@
       background-color: transparent;
       grid-template-columns: repeat(2, 1fr);
       gap: 50px;
+
       .col {
         padding: 40px;
         border-radius: 10px;
@@ -462,6 +506,7 @@
           gap: 14px;
           font-size: 30px;
           margin-top: 10px;
+
           img {
             width: 122px;
           }
@@ -472,20 +517,25 @@
           display: flex;
           flex-direction: column;
           gap: 30px;
+
           li {
             display: flex;
             gap: 14px;
             align-items: center;
+
             img {
               height: 40px;
               width: 40px;
             }
+
             div {
               max-width: 320px;
+
               h5 {
                 font-size: 1.125rem;
                 font-weight: 600;
               }
+
               p {
                 font-size: 0.875rem;
                 font-weight: light;
@@ -508,8 +558,10 @@
 
   section.features {
     padding-block: 50px;
+
     .content {
       position: relative;
+
       h3 {
         font-weight: 700;
         font-size: 30px;
@@ -526,10 +578,12 @@
 
     .feature_grid {
       margin-top: 30px;
+
       .grid {
         grid-template-columns: 1fr 1.5fr;
         gap: 15px;
       }
+
       .equal-space {
         margin-top: 15px;
         gap: 15px;
@@ -549,6 +603,7 @@
           font-size: 20px;
           margin-top: 10px;
         }
+
         p {
           font-size: 0.875rem;
           font-weight: light;
@@ -561,67 +616,117 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
       gap: 1rem;
-      justify-items: center;
-      /* nice breathing room */
       padding: 1rem;
 
-      /* Cards */
-      .card {
-        background: oklch(98% 0.02 250);
-        border: 1px solid oklch(88% 0.03 250);
-        border-radius: 12px;
-        padding: 1rem;
-        box-shadow: 0 1px 0 oklch(90% 0.02 250);
-      }
+      /* Container queries enable karna ho to */
+      container-type: inline-size;
+      container-name: masonry;
+    }
 
-      /* Width variants via column span */
-      .card.span-2 {
+    /* Column wrapper (stacked cards in one cell) */
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: auto;
+    }
+
+    /* Card design */
+    .card {
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #0000000d;
+      box-shadow: 0 4px 44px 10px #00000005;
+      height: auto;
+    }
+
+    /* Card content */
+    .card > .flex {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+    .card ul {
+      gap: 5px;
+      display: flex;
+      align-items: center;
+    }
+    .card ul li {
+      font-size: 12px;
+    }
+
+    .card img {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: 1px solid #aaa;
+    }
+
+    .card h4 {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+    .card h4 span {
+      font-weight: 200;
+      font-size: 10px;
+      display: block;
+    }
+    .card > button {
+      padding: 0;
+      font-size: 12px;
+      display: block;
+      text-align: end;
+      width: 100%;
+    }
+    .card p {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #6d6d6d;
+      text-align: balance;
+    }
+
+    /* Width spans for variation */
+    .span-2 {
+      grid-column: span 2;
+    }
+    .span-3 {
+      grid-column: span 3;
+    }
+
+    /* Safety: big spans collapse on narrow containers */
+    @container masonry (max-width: 35rem) {
+      .span-3 {
         grid-column: span 2;
       }
-      .card.span-3 {
-        grid-column: span 3;
-      }
+    }
 
-      /* Optional: sprinkle some auto-variation without JS */
-      .masonry > .card:nth-child(5n) {
-        grid-column: span 2;
-      }
-      .masonry > .card:nth-child(7n + 3) {
-        grid-column: span 3;
-      }
-
-      /* Safety so giant spans don’t explode on narrow grids */
-      @container masonry (max-width: 35rem) {
-        .card.span-3 {
-          grid-column: span 2;
-        }
-      }
+    /* Mobile mode: switch to horizontal scroll */
+    @media (max-width: 600px) {
       .masonry {
-        container-type: inline-size;
-        container-name: masonry;
+        display: flex;
+        gap: 0.75rem;
+        overflow-x: auto;
+        padding-inline: 1rem;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
       }
 
-      /* Responsive mode: at small viewport, turn into 1-card horizontal scroller */
-      @media (max-width: 600px) {
-        .masonry {
-          display: flex;
-          gap: 0.75rem;
-          overflow-x: auto;
-          padding-inline: 1rem;
-          scroll-snap-type: x mandatory;
-          -webkit-overflow-scrolling: touch;
-        }
-        .card {
-          flex: 0 0 90%; /* one card per view-ish */
-          scroll-snap-align: start;
-          /* keep the same visual style */
-        }
-        /* spans don’t matter in scroll mode */
-        .card.span-2,
-        .card.span-3 {
-          flex-basis: 90%;
-        }
+      .card,
+      .span-2,
+      .span-3 {
+        flex: 0 0 90%; /* one card per screen */
+        scroll-snap-align: start;
       }
+    }
+    button.btn-primary {
+      max-width: max-content;
+      display: block;
+      margin-inline: auto;
+      width: 100%;
+      margin-top: 30px;
     }
   }
 }
