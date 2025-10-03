@@ -611,7 +611,42 @@
         }
       }
     }
+    .featured {
+      margin-top: 20px;
+      .card {
+        .flex {
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          h4 {
+            font-size: 18px;
+          }
+          img {
+            width: 60px;
+            height: 60px;
+          }
+          ul {
+            justify-content: center;
+          }
+        }
 
+        p {
+          max-width: 500px;
+          margin-inline: auto;
+          margin-top: 10px;
+          text-align: center;
+          display: -webkit-box;
+          -webkit-line-clamp: 4; /* max 3 lines */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        button {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 16px;
+        }
+      }
+    }
     .masonry {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
@@ -637,18 +672,18 @@
       border-radius: 10px;
       border: 1px solid #0000000d;
       box-shadow: 0 4px 44px 10px #00000005;
-      height: auto;
+      min-height: 100px;
     }
 
     /* Card content */
     .card > .flex {
       display: flex;
-      align-items: center;
+      align-items: start;
       gap: 10px;
       margin-bottom: 5px;
     }
     .card ul {
-      gap: 5px;
+      gap: 2px;
       display: flex;
       align-items: center;
     }
@@ -657,8 +692,8 @@
     }
 
     .card img {
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
       border-radius: 50%;
       border: 1px solid #aaa;
     }
@@ -679,13 +714,18 @@
       display: block;
       text-align: end;
       width: 100%;
+      margin-top: 10px;
     }
     .card p {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 400;
       line-height: 20px;
       color: #6d6d6d;
       text-align: balance;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* max 3 lines */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     /* Width spans for variation */
