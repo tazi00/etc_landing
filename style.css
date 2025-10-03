@@ -878,3 +878,134 @@
     }
   }
 }
+
+section.pricing {
+  padding-block: 4rem;
+  text-align: center;
+
+  /* Headline and subtext */
+  .content {
+    max-width: 42rem;
+    margin-inline: auto;
+    margin-bottom: 4rem;
+
+    h3 {
+      font-weight: 700;
+      font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+      color: var(--secondary-clr);
+      font-family: var(--font-display-medium);
+    }
+
+    p {
+      max-width: 38rem;
+      margin-inline: auto;
+      margin-top: 0.75rem;
+      font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+  }
+
+  /* Pricing grid */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    max-width: 70rem;
+    margin-inline: auto;
+    max-width: 62.5rem;
+    margin-inline: auto;
+  }
+
+  .plan {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: left;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 200;
+    }
+    h5 {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    p {
+      font-size: 12px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+    .price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--secondary-clr);
+      margin-top: -10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+      display: grid;
+      gap: 0.2rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        gap: 0.5rem;
+      }
+    }
+
+    button {
+      margin-top: 1rem;
+      width: 100%;
+      font-weight: 400;
+      background-color: transparent;
+      border: 1px solid var(--secondary-clr);
+      font-size: 14px;
+      color: var(--secondary-clr);
+    }
+
+    &:hover {
+      box-shadow: 0 8px 20px #00000015;
+      transform: translateY(-4px);
+    }
+  }
+
+  /* Highlighted plan */
+
+  .plan.featured {
+    border: 2px solid var(--primary-clr);
+    box-shadow: 0 12px 24px #0000001a;
+    transform: scale(1.1);
+
+    .price {
+      color: var(--primary-clr);
+    }
+
+    h4 {
+      background: #e9eff8;
+      color: #3b7ded;
+      padding: 4px 10px;
+      border-radius: 3px;
+      font-weight: 500;
+      font-size: 12px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    button {
+      background-color: var(--primary-clr);
+      border: none;
+      color: white;
+    }
+    &:hover {
+      box-shadow: 0 8px 20px #00000015;
+      transform: scale(1.15);
+    }
+  }
+}
