@@ -658,6 +658,114 @@
       container-name: masonry;
     }
 
+    .integrations {
+      position: relative;
+      & > img {
+        border-radius: 10px;
+        height: 500px;
+        object-fit: cover;
+        object-position: top;
+        filter: blur(80px);
+      }
+      .data {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &:nth-child(even) {
+          margin-top: -50px;
+        }
+        img {
+          height: 80px;
+          width: 80px;
+        }
+      }
+      .int-card {
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(23px);
+        -webkit-backdrop-filter: blur(23px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.5),
+          inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+          inset 0 0 22px 11px rgba(255, 255, 255, 1.1);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        height: 120px;
+        width: 120px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .int-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.8),
+          transparent
+        );
+      }
+
+      .int-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.8),
+          transparent,
+          rgba(255, 255, 255, 0.3)
+        );
+      }
+
+      .cont {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h6 {
+          font-size: 30px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: 14px;
+          max-width: 400px;
+          text-wrap: balance;
+        }
+        button.btn.btn-primary {
+          margin-inline: 0;
+        }
+        & > .flex {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .item {
+          grid-template-columns: repeat(4, 1fr);
+
+          &.flex {
+            justify-content: end;
+            margin-top: -80px;
+            gap: 10px;
+          }
+        }
+      }
+    }
     /* Column wrapper (stacked cards in one cell) */
     .col {
       display: flex;
