@@ -30,8 +30,8 @@
             <h3 class="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -49,8 +49,8 @@
             <h3 class="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -97,11 +97,11 @@
           </nav>
           <div class="options">
             <ul class="flex justify-end items-center">
-              <li>
+              <!-- <li>
                 <select name="" id="">
                   <option value="">en</option>
                 </select>
-              </li>
+              </li> -->
               <li>
                 <button class="btn btn-ghost">Login</button>
               </li>
@@ -136,6 +136,14 @@
     </header>
 
     <section class="hero-sec">
+      <div class="circle" data-animate data-stagger="150">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </div>
+
+      <!-- <div class="float-img"></div> -->
+
       <div class="container">
         <div class="gradient g1"></div>
         <div class="gradient g2"></div>
@@ -299,6 +307,7 @@
             <img
               src="/img/vs-img1.png"
               alt=""
+              style="filter: grayscale(1)"
               data-animate="rise-parallax"
               data-duration="1200"
               data-easing="cubic-bezier(.2,.9,.2,1.1)"
@@ -1383,98 +1392,242 @@
         </div>
       </div>
     </section>
-    <footer data-animate="fade-in" data-duration="800">
+    <footer>
       <div class="container">
-        <div class="top" data-stagger="100">
-          <div class="col" data-animate="fade-up">
-            <a href="">
-              <img src="/img/logo.png" alt="" class="footer-logo" />
+        <div class="footer-main">
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <a href="/" class="logo">
+              <svg
+                width="120"
+                height="32"
+                viewBox="0 0 120 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Modern logo SVG -->
+                <rect
+                  x="0"
+                  y="0"
+                  width="32"
+                  height="32"
+                  rx="8"
+                  fill="#4F46E5"
+                />
+                <text
+                  x="40"
+                  y="22"
+                  font-family="Arial, sans-serif"
+                  font-size="16"
+                  font-weight="600"
+                  fill="#fff"
+                >
+                  ETC CRM
+                </text>
+              </svg>
             </a>
-            <p>
-              ETC CRM platform is a systematic process in which all the
-              opportunities of your business are qualified, analyzed, and
-              nurtured by time to time.
+            <p class="brand-description">
+              A systematic CRM platform that qualifies, analyzes, and nurtures
+              all your business opportunities.
             </p>
+
+            <div class="newsletter">
+              <h4>Stay updated</h4>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" />
+                <button type="submit">Subscribe</button>
+              </div>
+            </div>
           </div>
 
-          <div class="col" data-animate="fade-up">
-            <h5>Company</h5>
-            <ul>
-              <li><a href="">Blog</a></li>
-              <li><a href="">Features</a></li>
-              <li><a href="">What's New</a></li>
-              <li><a href="">Video Tutorial</a></li>
-              <li><a href="">FAQ</a></li>
-              <li><a href="">Contact us</a></li>
-            </ul>
-          </div>
+          <!-- Links Grid -->
+          <div class="footer-links">
+            <div class="link-group">
+              <h5>Product</h5>
+              <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Integrations</a></li>
+                <li><a href="#">API</a></li>
+                <li><a href="#">Status</a></li>
+              </ul>
+            </div>
 
-          <div class="col" data-animate="fade-up">
-            <h5>Resources</h5>
-            <ul>
-              <li><a href="">Blog</a></li>
-              <li><a href="">Features</a></li>
-              <li><a href="">What's New</a></li>
-              <li><a href="">Video Tutorial</a></li>
-              <li><a href="">FAQ</a></li>
-              <li><a href="">Contact us</a></li>
-            </ul>
-          </div>
+            <div class="link-group">
+              <h5>Company</h5>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Partners</a></li>
+              </ul>
+            </div>
 
-          <div class="col" data-animate="fade-up">
-            <ul>
-              <li>
-                <span><!-- pin svg --></span>
-                <a href=""
-                  >2047, Silver Business Point, Near VIP Circle, Uttran, Surat -
-                  394105</a
-                >
-              </li>
-              <li>
-                <span><!-- phone svg --></span>
-                <a href="tel:+919913299890">+91 9913299890</a>
-              </li>
-              <li>
-                <span><!-- mail svg --></span>
-                <a href="mailto:contact@365leadmanagement.com"
-                  >contact@365leadmanagement.com</a
-                >
-              </li>
-            </ul>
+            <div class="link-group">
+              <h5>Resources</h5>
+              <ul>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="link-group">
+              <h5>Legal</h5>
+              <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">GDPR</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="bottom" data-animate="fade-in" data-duration="700">
-          <h6>©2025 ETC CRM. All rights reserved.</h6>
-          <ul>
-            <li><a href="">Privacy policy</a></li>
-            <li><a href="">Terms of use</a></li>
-          </ul>
-          <ul>
-            <li>
-              <a href=""
-                ><img
-                  src="https://imgs.search.brave.com/k_2dnZF9_nHmlfZNbNMTOllLeboJpd60jVOSqOYsdxg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL3ByZW1p/dW0vcG5nLTI1Ni10/aHVtYi9mYWNlYm9v/ay1pY29uLXN2Zy1k/b3dubG9hZC1wbmct/NDI4NTc2My5wbmc_/Zj13ZWJwJnc9MTI4"
-                  alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="">
-                <img
-                  src="https://imgs.search.brave.com/CsHa65rxUnKk_XvehJnYDcBGyMTQCnPut2UUBJSRdsc/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL3ByZW1p/dW0vcG5nLTI1Ni10/aHVtYi95b3V0dWJl/LWxvZ28taWNvbi1z/dmctZG93bmxvYWQt/cG5nLTIyMTY2Mjcu/cG5nP2Y9d2VicCZ3/PTEyOA"
-                  alt=""
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg
+              class="contact-icon"
+              width="16"
+              height="16"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                d="M4 21h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z"
+              />
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                d="m4 7 8 5 8-5"
+              />
+            </svg>
+            <a href="mailto:contact@365leadmanagement.com"
+              >contact@365leadmanagement.com</a
+            >
+          </div>
+
+          <div class="contact-item">
+            <svg
+              class="contact-icon"
+              width="16"
+              height="16"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                d="M8.892 5.143A1 1 0 0 1 9.89 4.5h4.22a1 1 0 0 1 .998.643l.333 1a1 1 0 0 1-.997 1.357H9.556a1 1 0 0 1-.998-1.357l.334-1Z"
+              />
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                d="M15.25 19.25h-6.5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h6.5a2 2 0 0 1 2 2v8.25a2 2 0 0 1-2 2Z"
+              />
+            </svg>
+            <a href="tel:+919913299890">+91 9913299890</a>
+          </div>
+
+          <div class="contact-item">
+            <svg
+              class="contact-icon"
+              width="16"
+              height="16"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+              />
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                d="M19 10c0 3.866-7 9-7 9s-7-5.134-7-9a7 7 0 1 1 14 0Z"
+              />
+            </svg>
+            <span
+              >2047, Silver Business Point, Near VIP Circle, Uttran, Surat -
+              394105</span
+            >
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="copyright">© 2025 ETC CRM. All rights reserved.</div>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.936 4.936 0 0 0 4.604 3.417 9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.213c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0 0 24 4.59z"
                 />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img
-                  src="https://imgs.search.brave.com/j6-9DWiDcnIGbIacDqcScM-9y1u0EwZzt8pdbwcIXOI/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LXR3aXR0ZXItbG9n/by1pY29uLXN2Zy1k/b3dubG9hZC1wbmct/ODk4MTUyLnBuZz9m/PXdlYnAmdz0xMjg"
-                  alt=""
+              </svg>
+            </a>
+
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                 />
-              </a>
-            </li>
-          </ul>
+              </svg>
+            </a>
+
+            <a href="#" class="social-link" aria-label="GitHub">
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
+
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
