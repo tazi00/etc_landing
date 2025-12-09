@@ -32,7 +32,7 @@
 
 @layer theme {
   :root {
-    --primary-clr: #3b7ded;
+    --primary-clr: #e53935;
     --secondary-clr: #001231;
     --background-clr: #fbfbfb;
     --accent-text-clr: #818181;
@@ -110,7 +110,7 @@
 
   .gradient {
     position: absolute;
-    background: linear-gradient(45deg, #49545d87, #193e74);
+    background: linear-gradient(45deg, #5d494987, #741919);
     filter: blur(104px);
   }
 
@@ -169,11 +169,11 @@
   }
 
   .badge {
-    color: #3b7ded;
+    color: #ed3b3b;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    background: #3b7ced2e;
+    background: #ed3b3b2e;
     padding-inline: 20px;
     padding-block: 6px;
     display: inline-block;
@@ -186,24 +186,26 @@
   .btn {
     background-image: linear-gradient(
       to right,
-      #00c6ff 0%,
-      #0072ff 51%,
-      #00c6ff 100%
+      #e53935 0%,
+      #e35d5b 51%,
+      #e53935 100%
     );
-
-    transition: 0.5s;
+    background-position: left center; /* Add this line */
+    transition: background-position 0.5s; /* Specify which property to transition */
     background-size: 200% auto;
     position: relative;
     height: 40px;
     width: 150px;
     border: transparent;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
     &:hover {
-      background-position: right center; /* change the direction of the change here */
+      background-position: right center; /* This will now work */
       color: #fff;
       text-decoration: none;
     }
@@ -221,6 +223,7 @@
       gap: 5px;
       align-items: center;
     }
+
     & svg {
       width: 20px;
       height: 20px;
@@ -246,11 +249,11 @@
     position: absolute;
     left: 50%;
     top: 50px;
-    background-color: #9dcbf521;
+    background-color: #f59d9d21;
     width: 1200px;
     z-index: 9;
     min-height: 50px;
-    border: 1px solid #2e5172;
+    border: 1px solid #722e2e;
 
     display: flex;
     align-items: center;
@@ -344,9 +347,9 @@
           .register {
             background-image: linear-gradient(
               to right,
-              #00c6ff 0%,
-              #0072ff 51%,
-              #00c6ff 100%
+              #e53935 0%,
+              #e35d5b 51%,
+              #e53935 100%
             );
 
             transition: 0.5s;
@@ -431,8 +434,8 @@
     position: relative;
     background: linear-gradient(
       -45deg,
-      #143a81,
-      #00062b,
+      #3f100e,
+      #520000,
       rgb(39, 7, 7),
       rgb(48, 49, 0)
     );
@@ -580,7 +583,7 @@
 
       h6 {
         font-size: 12px;
-        background-color: #9dcbf521;
+        background-color: #f59d9d21;
         padding-inline: 5px;
         padding-right: 10px;
         padding-block: 5px;
@@ -589,17 +592,17 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        border: 1px solid #2e5172;
+        border: 1px solid #722e2e;
         margin-bottom: 10px;
         span {
           color: #ffffff;
           font-weight: bold;
           padding: 3px 9px;
-          background: linear-gradient(
+          background-image: linear-gradient(
             to right,
-            #00c6ff 0%,
-            #2a8aff 51%,
-            #00c6ff 100%
+            #e53935 0%,
+            #e35d5b 51%,
+            #e53935 100%
           );
           font-size: 10px;
           border-radius: 6px;
@@ -619,7 +622,11 @@
           display: block;
 
           &.color {
-            background: linear-gradient(#00c6ff 0%, #0072ff 51%, #00c6ff 100%);
+            background-image: linear-gradient(
+              to right,
+              #e53935 0%,
+              #e35d5b 51%
+            );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -855,9 +862,9 @@
           &.after {
             background-image: linear-gradient(
               to right,
-              #00c6ff 0%,
-              #0072ff 51%,
-              #00c6ff 100%
+              #e53935 0%,
+              #e35d5b 51%,
+              #e53935 100%
             );
           }
         }
@@ -936,10 +943,10 @@
         }
         &.after {
           span {
-            background-color: rgb(0, 68, 255 / 8%);
+            background-color: #e538351a;
 
             svg {
-              color: #3b7ded;
+              color: #e53935;
               /* margin-top: 6px; */
             }
           }
@@ -1034,48 +1041,252 @@
       margin-top: 30px;
       z-index: 99;
       position: relative;
-      img {
-        width: auto;
-        height: 150px;
-        object-fit: contain;
-        object-position: left;
-      }
+
       .grid {
         grid-template-columns: 1fr 1.5fr;
-        gap: 15px;
+        gap: 20px;
+        margin-bottom: 20px;
       }
 
       .equal-space {
-        margin-top: 15px;
-        gap: 15px;
+        gap: 20px;
+      }
+
+      .cards-container {
+        display: grid;
+        gap: 20px;
       }
 
       .col {
-        padding: 40px;
-        border-radius: 10px;
+        position: relative;
+        padding: 32px 28px;
+        border-radius: 16px;
         border: 1px solid #0000000d;
-        box-shadow: 0 4px 44px 10px #00000005;
+        box-shadow: inset 0 4px 114px 10px #ffffff14, 0px 0px 5px 1px #ffffff45;
         gap: 0;
-        transition: transform 220ms var(--anim-ease),
-          box-shadow 220ms var(--anim-ease);
-        content-visibility: auto;
-        contain-intrinsic-size: 400px 360px;
-        h5 {
-          font-family: var(--font-display-medium);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        cursor: pointer;
+
+        /* Parallax container */
+        .parallax-wrapper {
+          position: relative;
+          overflow: hidden;
+          border-radius: 12px;
+          height: 200px;
+          background: linear-gradient(135deg, #fff5f5 0%, #ffeaea 100%);
           display: flex;
           align-items: center;
-          gap: 14px;
-          font-size: 20px;
-          margin-top: 10px;
-          margin-bottom: 0;
+          justify-content: center;
+          transform-style: preserve-3d;
+          perspective: 1000px;
+
+          .icon-container {
+            position: relative;
+            z-index: 2;
+            transform-style: preserve-3d;
+            transition: transform 0.4s ease-out;
+            /* padding: 10px; */
+            img {
+              width: 200px;
+              height: 200px;
+              stroke-width: 1.5;
+              stroke: #ff3b30;
+              fill: none;
+              transition: all 0.3s ease;
+            }
+          }
+
+          .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+              circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+              rgba(255, 59, 48, 0.08) 0%,
+              rgba(255, 59, 48, 0.02) 50%,
+              transparent 70%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+        }
+
+        /* Red accent */
+        /* &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 4px;
+          height: 100%;
+          background: linear-gradient(to bottom, #ff3b30, #ff6b6b);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        } */
+
+        h5 {
+          font-family: var(--font-display-medium);
+          font-size: 18px;
+          margin: 0;
+          color: #1a1a1a;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          transition: transform 0.3s ease;
+
+          .title-icon {
+            width: 20px;
+            height: 20px;
+            color: #ff3b30;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+          }
         }
 
         p {
           font-size: 14px;
-          font-weight: light;
-          color: #676767;
-          margin-top: 0;
+          line-height: 1.6;
+          color: #666;
+          margin: 0;
+          transition: transform 0.3s ease 0.1s;
         }
+
+        /* Hover Effects */
+        &.red {
+          &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 59, 48, 0.15),
+              0 8px 16px rgba(255, 59, 48, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+
+            &::before {
+              opacity: 1;
+            }
+
+            .parallax-wrapper {
+              .icon-container {
+                transform: translateZ(20px) scale(1.05);
+
+                svg {
+                  stroke: #ff3b30;
+                  stroke-width: 2;
+                }
+              }
+
+              .parallax-bg {
+                opacity: 1;
+              }
+            }
+
+            h5 {
+              transform: translateX(4px);
+
+              .title-icon {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+
+            p {
+              transform: translateX(2px);
+            }
+          }
+        }
+
+        &.blue {
+          &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(48, 69, 255, 0.15),
+              0 8px 16px rgba(48, 69, 255, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+
+            &::before {
+              opacity: 1;
+            }
+
+            .parallax-wrapper {
+              .icon-container {
+                transform: translateZ(20px) scale(1.05);
+
+                svg {
+                  stroke: #309bff;
+                  stroke-width: 2;
+                }
+              }
+
+              .parallax-bg {
+                opacity: 1;
+              }
+            }
+
+            h5 {
+              transform: translateX(4px);
+
+              .title-icon {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+
+            p {
+              transform: translateX(2px);
+            }
+          }
+        }
+
+        /* Subtle animation on load */
+        @keyframes cardAppear {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        animation: cardAppear 0.6s ease-out forwards;
+        opacity: 0;
+
+        &:nth-child(2) {
+          animation-delay: 0.1s;
+        }
+        &:nth-child(3) {
+          animation-delay: 0.2s;
+        }
+        &:nth-child(4) {
+          animation-delay: 0.3s;
+        }
+        &:nth-child(5) {
+          animation-delay: 0.4s;
+        }
+      }
+
+      /* Specific card variations */
+      .col:nth-child(1) .parallax-wrapper {
+        background: linear-gradient(135deg, #fff5f5 0%, #ffeaea 100%);
+      }
+
+      .col:nth-child(2) .parallax-wrapper {
+        background: linear-gradient(135deg, #f0f7ff 0%, #e1f0ff 100%);
+      }
+
+      .col:nth-child(4) .parallax-wrapper {
+        background: linear-gradient(135deg, #f5fff0 0%, #eaffea 100%);
+      }
+
+      .col:nth-child(3) .parallax-wrapper {
+        background: linear-gradient(135deg, #fff5f5 0%, #ffeaea 100%);
+      }
+
+      .col:nth-child(5) .parallax-wrapper {
+        background: linear-gradient(135deg, #fff5f5 0%, #ffeaea 100%);
       }
     }
     .featured {
@@ -1119,6 +1330,7 @@
           text-align: center;
           margin-top: 20px;
           font-size: 16px;
+          color: #fff;
         }
       }
     }
@@ -1327,7 +1539,8 @@
       padding: 0;
       font-size: 12px;
       display: block;
-      text-align: end;
+      color: white;
+      text-align: center;
       width: 100%;
       margin-top: 10px;
     }
@@ -1484,7 +1697,7 @@
       padding-top: 50px;
       text-align: center;
       padding-bottom: 150px;
-      background-color: #001231;
+      background: linear-gradient(to right, #e53935, #e35d5b);
       color: #fff;
       h3 {
         font-weight: 700;
@@ -1541,6 +1754,7 @@
 
       button {
         margin-top: 20px;
+        color: white;
         margin-inline: auto;
       }
     }

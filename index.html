@@ -187,11 +187,7 @@
 
           <ul data-stagger="300">
             <li data-animate="fade-up" data-duration="1000">
-              <button
-                class="btn btn-primary"
-                data-animate="zoom-in"
-                data-delay="40"
-              >
+              <button class="btn btn-primary">
                 <span>
                   Start Free Trial
                   <svg
@@ -546,21 +542,23 @@
               </label>
               <label data-animate="fade-up">
                 Email
-                <input type="text" placeholder="email" />
+                <input type="email" placeholder="email" />
+              </label>
+              <label data-animate="fade-up">
+                Phone No.
+                <input type="number" placeholder="Phone No." />
+              </label>
+              <label data-animate="fade-up">
+                City
+                <input type="text" placeholder="city" />
               </label>
               <label data-animate="fade-up">
                 Message
                 <textarea placeholder="message"></textarea>
               </label>
             </div>
-            <div class="text-center">
-              <button
-                class="btn btn-primary"
-                data-animate="zoom-in"
-                data-delay="150"
-              >
-                Send
-              </button>
+            <div class="text-center" data-animate="zoom-in" data-delay="150">
+              <button class="btn btn-primary">Send</button>
             </div>
           </form>
         </div>
@@ -576,75 +574,202 @@
           <h6 class="badge" data-animate="fade-up">Problem</h6>
           <h3 data-animate="fade-up">Less chaos. More closed deals</h3>
           <p data-animate="fade-up">
-            No more lost leads, missed calls, or forgotten follow-ups. A simple
-            CRM that keeps you ahead—without the chaos of spreadsheets.
+            Eliminate lost leads, missed opportunities, and forgotten follow-ups
+            with our intelligent lead management CRM. Stay organized, track
+            every interaction, and close deals faster—without spreadsheets or
+            complicated workflows
           </p>
         </div>
 
         <!-- Top row: left & right cards -->
         <div class="feature_grid">
           <div class="grid" data-stagger="120">
-            <div class="col" data-animate="fade-up" data-duration="600">
-              <img
-                src="/img/features1.png"
-                alt=""
-                data-animate="rise-parallax"
-                data-duration="700"
-              />
-              <h5>Leads Visualization</h5>
-              <p>Leads scattered across spreadsheets & WhatsApp chats…</p>
+            <!-- Card 1: Capture -->
+            <div class="col red" data-animate="fade-up" data-duration="600">
+              <div class="parallax-wrapper">
+                <div class="icon-container">
+                  <img src="./img/card1.chart.svg" alt="" />
+                </div>
+                <div class="parallax-bg"></div>
+              </div>
+              <h5>
+                Capture Every Lead from Any Channel
+                <svg
+                  class="title-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </h5>
+              <p>
+                Never lose a lead again. Automatically capture incoming leads
+                from emails, phone calls, web forms, social media, and WhatsApp
+                in one centralized location. Our lead management system ensures
+                no prospect slips through the cracks, giving your sales team a
+                complete view of every potential customer.
+              </p>
             </div>
 
+            <!-- Card 2: Organize -->
             <div
-              class="col"
+              class="col blue"
               data-animate="fade-up"
               data-duration="650"
               data-delay="60"
             >
-              <img
-                src="/img/features2.png"
-                alt=""
-                data-animate="rise-parallax"
-                data-duration="720"
-              />
-              <h5>Leads Visualization</h5>
-              <p>Leads scattered across spreadsheets & WhatsApp chats…</p>
+              <div class="parallax-wrapper">
+                <div class="icon-container">
+                  <img
+                    src="./img/card3.chart.svg"
+                    alt=""
+                    style="width: 500px; height: auto"
+                  />
+                </div>
+                <div class="parallax-bg"></div>
+              </div>
+              <h5>
+                Organize Your Sales Pipeline—One Clean View
+                <svg
+                  class="title-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </h5>
+              <p>
+                See your entire lead management pipeline at a glance. All leads
+                are automatically organized by sales stage, assigned owner, and
+                priority level. Track prospects from initial contact to deal
+                closure with customizable pipeline stages that match your unique
+                sales process. No more confusion. Pure clarity.
+              </p>
             </div>
           </div>
 
           <!-- Bottom row: 3-up, slight stagger -->
           <div class="flex equal-space" data-stagger="100">
-            <div class="col" data-animate="fade-up" data-duration="600">
-              <img
-                src="/img/features3.png"
-                alt=""
-                data-animate="rise-parallax"
-                data-duration="700"
-              />
-              <h5>Leads Visualization</h5>
-              <p>Leads scattered across spreadsheets & WhatsApp chats…</p>
+            <!-- Card 3: Follow-up -->
+            <div class="col red" data-animate="fade-up" data-duration="600">
+              <div class="parallax-wrapper">
+                <div class="icon-container">
+                  <img src="./img/card2.chart.svg" alt="" />
+                </div>
+                <div class="parallax-bg"></div>
+              </div>
+              <h5>
+                Never Miss a Follow-Up Again
+                <svg
+                  class="title-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </h5>
+              <p>
+                Automatic reminders ensure no deal slips through the cracks. Set
+                follow-up schedules, get timely notifications, and track every
+                customer interaction—emails, calls, meetings, and notes. Our
+                intelligent lead management CRM keeps your team accountable and
+                prospects engaged at every stage of the sales cycle.
+              </p>
             </div>
 
-            <div class="col" data-animate="fade-up" data-duration="650">
-              <img
-                src="/img/features4.png"
-                alt=""
-                data-animate="rise-parallax"
-                data-duration="720"
-              />
-              <h5>Leads Visualization</h5>
-              <p>Leads scattered across spreadsheets & WhatsApp chats…</p>
+            <!-- Card 4: Visibility -->
+            <div class="col blue" data-animate="fade-up" data-duration="650">
+              <div class="parallax-wrapper">
+                <div class="icon-container">
+                  <img src="./img/card4.chart.svg" alt="" />
+                </div>
+                <div class="parallax-bg"></div>
+              </div>
+              <h5>
+                Identify Bottlenecks in Your Sales Process
+                <svg
+                  class="title-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </h5>
+              <p>
+                Instantly recognize which deals need attention today. Spot
+                stalled opportunities, identify pipeline bottlenecks, and
+                understand where prospects are getting stuck. Use real-time
+                analytics to make data-driven decisions and accelerate your
+                sales cycle. Know exactly where to focus your effort for maximum
+                impact
+              </p>
             </div>
 
-            <div class="col" data-animate="fade-up" data-duration="700">
-              <img
-                src="/img/features5.png"
-                alt=""
-                data-animate="rise-parallax"
-                data-duration="740"
-              />
-              <h5>Leads Visualization</h5>
-              <p>Leads scattered across spreadsheets & WhatsApp chats…</p>
+            <!-- Card 5: Close -->
+            <div class="col red" data-animate="fade-up" data-duration="700">
+              <div class="parallax-wrapper">
+                <div class="icon-container">
+                  <img src="./img/card5.chart.svg" alt="" />
+                </div>
+                <div class="parallax-bg"></div>
+              </div>
+              <h5>
+                Close Deals with Data-Driven Confidence
+                <svg
+                  class="title-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </h5>
+              <p>
+                Stop guessing. Know your win probability at every stage. Our
+                lead management CRM provides actionable insights to help you
+                focus on high-probability opportunities and move deals forward
+                strategically. Close more deals, faster, with less wasted effort
+                on prospects that won't convert.
+              </p>
             </div>
           </div>
         </div>
