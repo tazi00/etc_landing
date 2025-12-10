@@ -113,114 +113,118 @@
       </div>
     </section>
 
-    <div class="form-section">
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label for="name">Full Name *</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Enter your full name"
-          />
+    <section class="contact-sec">
+      <div class="container">
+        <div class="form-section">
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your full name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="your.email@example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Mobile Number *</label>
+              <div class="phone-input">
+                <select id="country-code" name="country-code">
+                  <option value="+91">🇮🇳 +91</option>
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+86">🇨🇳 +86</option>
+                  <option value="+81">🇯🇵 +81</option>
+                </select>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="Enter your mobile number"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                placeholder="What is this regarding?"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Tell us more about your inquiry..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
         </div>
 
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="your.email@example.com"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Mobile Number *</label>
-          <div class="phone-input">
-            <select id="country-code" name="country-code">
-              <option value="+91">🇮🇳 +91</option>
-              <option value="+1">🇺🇸 +1</option>
-              <option value="+44">🇬🇧 +44</option>
-              <option value="+86">🇨🇳 +86</option>
-              <option value="+81">🇯🇵 +81</option>
-            </select>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              placeholder="Enter your mobile number"
-            />
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h3>Address</h3>
+              <p>
+                M R Group of Colleges & Hospitals, Taki Road, Opposite
+                Karma-Tirtha Building, Barasat, Kolkata, West Bengal
+              </p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div class="info-content">
+              <h3>Phone</h3>
+              <p>+91 9913299890<br />+91 9913299865</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div class="info-content">
+              <h3>Email</h3>
+              <p>lorem@etccrm.com<br />support@etccrm.com</p>
+            </div>
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="subject">Subject *</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            required
-            placeholder="What is this regarding?"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message *</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            placeholder="Tell us more about your inquiry..."
-          ></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
-    </div>
-
-    <div class="contact-info">
-      <div class="info-item">
-        <div class="info-icon">📍</div>
-        <div class="info-content">
-          <h3>Address</h3>
-          <p>
-            M R Group of Colleges & Hospitals, Taki Road, Opposite Karma-Tirtha
-            Building, Barasat, Kolkata, West Bengal
-          </p>
+        <div class="map-section">
+          <h2 class="map-title">Find Us Here</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.5326891234567!2d88.4877496!3d22.7176083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8a38e5a542e9f%3A0x526d2fe93f5ffb6b!2sM%20R%20GROUP%20OF%20COLLEGES%20%26%20HOSPITALS%20(HEAD%20OFFICE)!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
         </div>
       </div>
-      <div class="info-item">
-        <div class="info-icon">📞</div>
-        <div class="info-content">
-          <h3>Phone</h3>
-          <p>+91 9913299890<br />+91 9913299865</p>
-        </div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon">✉️</div>
-        <div class="info-content">
-          <h3>Email</h3>
-          <p>lorem@etccrm.com<br />support@etccrm.com</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="map-section">
-      <h2 class="map-title">Find Us Here</h2>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.5326891234567!2d88.4877496!3d22.7176083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8a38e5a542e9f%3A0x526d2fe93f5ffb6b!2sM%20R%20GROUP%20OF%20COLLEGES%20%26%20HOSPITALS%20(HEAD%20OFFICE)!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        >
-        </iframe>
-      </div>
-    </div>
+    </section>
 
     &nbsp;
     <footer>
