@@ -3892,6 +3892,7 @@ section.pricing-sec2 {
   padding: 48px 40px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   border: 1px solid #eef2ff;
+  margin-top: 50px;
 }
 
 .form-section h2 {
@@ -4276,5 +4277,208 @@ section.pricing-sec2 {
 
   .map-container {
     height: 300px;
+  }
+}
+
+/* modal */
+.open-modal-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  background: #ff7a2f;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 100;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal */
+.modal {
+  background: #f6f1e7;
+  border-radius: 24px;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 20px;
+  background: transparent;
+  color: #fff;
+  z-index: 2;
+}
+
+.modal-inner {
+  display: flex;
+  width: 100%;
+}
+
+/* Left side: form */
+.modal-left {
+  background: #222;
+  color: #fff;
+  padding: 2.5rem 2.75rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.modal-left h2 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.modal-left p.subtitle {
+  color: #d1d1d1;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.form-control label {
+  color: #f3f3f3;
+}
+
+.form-control input {
+  border-radius: 999px;
+  border: 1px solid #555;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  outline: none;
+  background: #111;
+  color: #fff;
+}
+
+.form-control input:focus {
+  border-color: #ff7a2f;
+  box-shadow: 0 0 0 1px #ff7a2f;
+}
+
+.submit-btn {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: #ff7a2f;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  width: 100%;
+  text-align: center;
+}
+
+.small-text {
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+  color: #b3b3b3;
+  line-height: 1.4;
+}
+
+.small-text a {
+  color: #ffb36a;
+  text-decoration: none;
+}
+
+.small-text a:hover {
+  text-decoration: underline;
+}
+
+/* Right side: image */
+.modal-right {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* replace with your image url */
+  background-image: url("https://images.pexels.com/photos/1685805/pexels-photo-1685805.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background-size: cover;
+  background-position: center;
+  filter: contrast(1.1) saturate(1.2);
+  transform: scale(1.02);
+}
+
+/* A subtle pattern/overlay if you want */
+.modal-right::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(255, 255, 255, 0.4) 1px,
+    transparent 0
+  );
+  background-size: 10px 10px;
+  mix-blend-mode: soft-light;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal {
+    margin: 0 1rem;
+  }
+
+  .modal-inner {
+    flex-direction: column;
+  }
+
+  .modal-left,
+  .modal-right {
+    width: 100%;
+  }
+
+  .modal-left {
+    order: 2;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .modal-right {
+    order: 1;
+    height: 220px;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 12px;
   }
 }

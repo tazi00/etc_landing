@@ -79,7 +79,7 @@
           <nav>
             <ul class="flex items-center justify-center">
               <li class="active">
-                <a href=""> Features </a>
+                <a href=""> Home </a>
               </li>
               <li>
                 <a href="/pricing.html"> Pricing </a>
@@ -101,7 +101,7 @@
                 <a href="" class="login">Login</a>
               </li>
               <li>
-                <a href="" class="register">
+                <button class="register" id="openModalBtn">
                   <span>
                     Get Started
                     <svg
@@ -120,7 +120,7 @@
                       <path d="m12 5 7 7-7 7" />
                     </svg>
                   </span>
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -1842,7 +1842,89 @@
     </footer>
 
     <div id="floating-actions"></div>
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <button class="modal-close" id="modalCloseBtn">&times;</button>
 
+        <div class="modal-inner">
+          <!-- LEFT: FORM -->
+          <div class="modal-left">
+            <div>
+              <h2>Try our Demo</h2>
+              <p class="subtitle">
+                Fill in your details and we’ll get in touch shortly.
+              </p>
+            </div>
+
+            <form id="demoForm">
+              <div class="form-group">
+                <div class="form-control">
+                  <label for="fullName">Full Name</label>
+                  <input
+                    id="fullName"
+                    name="fullName"
+                    type="text"
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label for="company">Company</label>
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    placeholder="Company name"
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label for="jobTitle">Job Title</label>
+                  <input
+                    id="jobTitle"
+                    name="jobTitle"
+                    type="text"
+                    placeholder="Product Manager"
+                  />
+                </div>
+              </div>
+
+              <button type="submit" class="submit-btn">Request Demo</button>
+
+              <p class="small-text">
+                By submitting this demo request form, you agree to our
+                <a href="#">Terms of Service</a>.
+              </p>
+            </form>
+          </div>
+
+          <!-- RIGHT: IMAGE -->
+          <div class="modal-right"></div>
+        </div>
+      </div>
+    </div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const system = document.querySelector(".solar-system");
@@ -2624,6 +2706,43 @@
   `;
         document.head.appendChild(rippleStyle);
       })();
+    </script>
+
+    <script>
+      const openBtn = document.getElementById("openModalBtn");
+      const overlay = document.getElementById("modalOverlay");
+      const closeBtn = document.getElementById("modalCloseBtn");
+      const form = document.getElementById("demoForm");
+
+      function openModal() {
+        overlay.classList.add("is-open");
+      }
+
+      function closeModal() {
+        overlay.classList.remove("is-open");
+      }
+
+      openBtn.addEventListener("click", openModal);
+      closeBtn.addEventListener("click", closeModal);
+
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) {
+          closeModal();
+        }
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        // yahan pe API call / fetch wagaira laga sakta hai
+        alert("Form submitted (demo). Add your logic here.");
+        closeModal();
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeModal();
+        }
+      });
     </script>
   </body>
 </html>
