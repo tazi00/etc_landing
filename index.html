@@ -295,33 +295,89 @@
             their success and growth.
           </p>
 
-          <div class="comp">
-            <div class="logos">
-              <img
-                src="https://imgs.search.brave.com/Z6moBSQ_WM-1PXgGhnW55azX89YzBpvEItrtrrkB2FI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWVr/dmVjdG9ycy5jb20v/c3RvcmFnZS9pbWFn/ZXMvc2xhY2stbmV3/LWxvZ28uc3Zn"
-                alt="Slack logo"
-              />
-              <img
-                src="https://imgs.search.brave.com/Z6moBSQ_WM-1PXgGhnW55azX89YzBpvEItrtrrkB2FI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWVr/dmVjdG9ycy5jb20v/c3RvcmFnZS9pbWFn/ZXMvc2xhY2stbmV3/LWxvZ28uc3Zn"
-                alt="Slack logo"
-              />
-              <img
-                src="https://imgs.search.brave.com/Z6moBSQ_WM-1PXgGhnW55azX89YzBpvEItrtrrkB2FI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWVr/dmVjdG9ycy5jb20v/c3RvcmFnZS9pbWFn/ZXMvc2xhY2stbmV3/LWxvZ28uc3Zn"
-                alt="Slack logo"
-              />
-              <img
-                src="https://imgs.search.brave.com/Z6moBSQ_WM-1PXgGhnW55azX89YzBpvEItrtrrkB2FI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWVr/dmVjdG9ycy5jb20v/c3RvcmFnZS9pbWFn/ZXMvc2xhY2stbmV3/LWxvZ28uc3Zn"
-                alt="Slack logo"
-              />
-              <img
-                src="https://imgs.search.brave.com/Z6moBSQ_WM-1PXgGhnW55azX89YzBpvEItrtrrkB2FI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWVr/dmVjdG9ycy5jb20v/c3RvcmFnZS9pbWFn/ZXMvc2xhY2stbmV3/LWxvZ28uc3Zn"
-                alt="Slack logo"
-              />
-              <img
-                src="https://imgs.search.brave.com/Z6moBSQ_WM-1PXgGhnW55azX89YzBpvEItrtrrkB2FI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWVr/dmVjdG9ycy5jb20v/c3RvcmFnZS9pbWFn/ZXMvc2xhY2stbmV3/LWxvZ28uc3Zn"
-                alt="Slack logo"
-              />
+          <div class="slider-container">
+            <div class="logos-slider">
+              <div class="logos-wrapper" id="logosWrapper">
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png"
+                    alt="Slack"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+                    alt="Amazon"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                    alt="Microsoft"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                    alt="Google"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
+                    alt="IBM"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+                    alt="Netflix"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/02/Stack_Overflow_logo.svg"
+                    alt="Stack Overflow"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+                    alt="Spotify"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Twitter_logo.svg"
+                    alt="X (Twitter)"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Zoom_Communications_Logo.svg"
+                    alt="Zoom"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram"
+                  />
+                </div>
+                <div class="logo-slide">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/2/21/Meta_Platforms_Inc._logo.svg"
+                    alt="Meta"
+                  />
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="controls">
+            <button class="btn-slider" id="prevBtn">❮</button>
+            <div class="dots" id="dotsContainer"></div>
+            <button class="btn-slider" id="nextBtn">❯</button>
           </div>
         </div>
       </div>
@@ -1882,6 +1938,100 @@
         window.addEventListener("resize", updateConnectionLines);
       });
     </script>
+
+    <script>
+      const wrapper = document.getElementById("logosWrapper");
+      const dotsContainer = document.getElementById("dotsContainer");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      const slides = wrapper.querySelectorAll(".logo-slide");
+      const totalSlides = slides.length;
+      let slidesPerView = 6;
+      let currentIndex = 0;
+      let autoSlideInterval;
+
+      function getSlideCount() {
+        if (window.innerWidth >= 1200) {
+          return 6;
+        } else if (window.innerWidth >= 768) {
+          return 3;
+        } else {
+          return 1;
+        }
+      }
+
+      window.addEventListener("resize", () => {
+        slidesPerView = getSlideCount();
+        updateSlider();
+      });
+
+      function initDots() {
+        for (let i = 0; i < totalSlides - slidesPerView + 1; i++) {
+          const dot = document.createElement("button");
+          dot.classList.add("dot");
+          if (i === 0) dot.classList.add("active");
+          dot.addEventListener("click", () => goToSlide(i));
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateSlider() {
+        wrapper.style.transform = `translateX(${
+          -currentIndex * (100 / slidesPerView)
+        }%)`;
+
+        document.querySelectorAll(".dot").forEach((dot, i) => {
+          dot.classList.toggle("active", i === currentIndex);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex++;
+        if (currentIndex > totalSlides - slidesPerView) {
+          currentIndex = 0;
+        }
+        updateSlider();
+        resetAutoSlide();
+      }
+
+      function prevSlide() {
+        currentIndex--;
+        if (currentIndex < 0) {
+          currentIndex = totalSlides - slidesPerView;
+        }
+        updateSlider();
+        resetAutoSlide();
+      }
+
+      function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+        resetAutoSlide();
+      }
+
+      function autoSlide() {
+        if (currentIndex < totalSlides - slidesPerView) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateSlider();
+      }
+
+      function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(autoSlide, 5000);
+      }
+
+      nextBtn.addEventListener("click", nextSlide);
+      prevBtn.addEventListener("click", prevSlide);
+
+      initDots();
+      slidesPerView = getSlideCount();
+      updateSlider();
+      resetAutoSlide();
+    </script>
     <!-- <section class="integrations">
       <img src="/img/bg-interation.png" alt="" />
 
@@ -1955,7 +2105,7 @@
                             </h4>
                         </div>
                         <p>${review.text}</p>
-                        <button class="btn btn-primary">Read more</button>
+                        <!-- <button class="btn btn-primary">Read more</button> -->
                     </div>
                 `;
         }
