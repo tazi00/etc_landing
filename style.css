@@ -367,6 +367,11 @@
             border-radius: 10px;
             font-weight: 500;
             font-size: 14px;
+
+            &:hover {
+              color: #abcbff;
+              border: 1px solid #92bcff;
+            }
           }
           .register {
             background-image: linear-gradient(
