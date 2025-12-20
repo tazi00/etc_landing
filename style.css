@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "InterVar";
-  src: url("/fonts/InterVariable.woff2") format("woff2-variations");
+  src: url("./fonts/InterVariable.woff2") format("woff2-variations");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -14,19 +14,19 @@
 
 @font-face {
   font-family: "Poppins-bold";
-  src: url("/fonts/Poppins-ExtraBold.ttf");
+  src: url("./fonts/Poppins-ExtraBold.ttf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Poppins-semibold";
-  src: url("/fonts/Poppins-SemiBold.ttf");
+  src: url("./fonts/Poppins-SemiBold.ttf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Poppins-Medium";
-  src: url("/fonts/Poppins-Medium.ttf");
+  src: url("./fonts/Poppins-Medium.ttf");
   font-display: swap;
 }
 
@@ -185,6 +185,11 @@
     max-width: max-content;
     height: 35px;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+      font-size: 10px;
+      font-family: var(--font-display-bold);
+    }
     &::after {
       content: "";
       position: absolute;
@@ -193,6 +198,11 @@
       background-color: #0051d40c;
       left: 0;
       top: 0;
+
+      @media (max-width: 600px) {
+        width: 100%;
+        height: 30px;
+      }
     }
   }
 }
@@ -285,6 +295,16 @@
     justify-content: center;
     transform: translateX(-50%);
     border-radius: 15px;
+
+    @media (max-width: 600px) {
+      position: fixed;
+      margin: 0;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      transform: translate(0, 0);
+      max-width: 100%;
+    }
     & * {
       /* outline: 1px solid limegreen; */
     }
@@ -319,7 +339,9 @@
     nav {
       flex: 1 1 auto;
       min-width: 0;
-
+      @media (max-width: 600px) {
+        display: none;
+      }
       ul {
         /* background-color: rebeccapurple; */
         li {
@@ -348,7 +370,9 @@
     .options {
       flex: 0 0 300px;
       margin-left: auto;
-
+      @media (max-width: 600px) {
+        display: none;
+      }
       ul {
         gap: 10px;
 
@@ -436,28 +460,6 @@
         }
       }
     }
-
-    @container header (max-width:800px) {
-      nav {
-        display: none;
-      }
-
-      .logo {
-        a {
-          img {
-            margin: 0;
-          }
-        }
-      }
-
-      .options {
-        display: none;
-      }
-
-      .hamburger {
-        display: block;
-      }
-    }
   }
 
   section.hero-sec {
@@ -469,6 +471,12 @@
     border-radius: 20px;
     padding-bottom: 400px;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+      margin: 0;
+      border-radius: 0;
+    }
+
     .img-grid {
       position: absolute;
       top: 0;
@@ -796,6 +804,10 @@
     margin-top: 60px; */
     padding: 20px 0 50px;
     margin-bottom: 80px;
+
+    @media (max-width: 600px) {
+      margin-bottom: 0px;
+    }
     .content {
       text-align: center;
       position: relative;
@@ -972,7 +984,9 @@
   }
   section.lose-details {
     padding-bottom: 50px;
-
+    @media (max-width: 600px) {
+      display: none;
+    }
     & .container {
       position: relative;
 
@@ -1249,6 +1263,11 @@
         grid-template-columns: 1fr 1.5fr;
         gap: 20px;
         margin-bottom: 20px;
+
+        @media (max-width: 600px) {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
       }
 
       .equal-space {
@@ -1920,6 +1939,22 @@
         margin-inline: auto;
         margin-top: 12px;
       }
+
+      @media (max-width: 600px) {
+        margin-bottom: 25px;
+        padding-top: 30px;
+
+        h3 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 12px;
+        }
+        .photo-hint.fade-up {
+          font-size: 12px;
+          margin-top: 10px;
+        }
+      }
     }
 
     .form {
@@ -1936,9 +1971,18 @@
       position: relative;
       z-index: 9;
 
+      @media (max-width: 600px) {
+        padding-block: 24px;
+        padding-inline: 24px;
+      }
       .grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px 20px;
+
+        @media (max-width: 600px) {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
       }
       label {
         display: flex;
@@ -1958,6 +2002,11 @@
           font-size: 14px;
           border-radius: 5px;
 
+          @media (max-width: 600px) {
+            font-size: 12px;
+            height: 30px;
+            padding: 10px;
+          }
           &:focus {
             outline: none;
             border-color: var(--primary-clr);
